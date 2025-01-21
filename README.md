@@ -28,54 +28,68 @@ Follow these steps to use the script:
    ```bash
    git clone <repository_url>
    cd <repository_name>
+   ```
 
-    Install Required Python Libraries Install the nbconvert package, which is used for converting .ipynb to .md:
+   2. **Install Required Python Libraries**
+   Install the `nbconvert` package, which is used for converting `.ipynb` to `.md`:
+   ```bash
+   pip install nbconvert
+   ```
 
-pip install nbconvert
+3. **Place the Jupyter Notebooks in the Directory**
+   Ensure all the `.ipynb` files you want to convert are in the same directory as the script (`convert_ipynb_to_docx.py`).
 
-Place the Jupyter Notebooks in the Directory Ensure all the .ipynb files you want to convert are in the same directory as the script (convert_ipynb_to_docx.py).
+4. **Run the Script**
+   Run the script from the terminal:
+   ```bash
+   python convert_ipynb_to_docx.py
+   ```
 
-Run the Script Run the script from the terminal:
+5. **View the Output**
+   - The script will generate `.docx` files for each `.ipynb` file in the current directory.
+   - The `.docx` files will be saved in the same directory as the script.
 
-    python convert_ipynb_to_docx.py
+6. **Clean Up (Optional)**
+   - The script automatically removes intermediate `.md` files after the conversion.
+   - If you want to keep the `.md` files, edit the script and comment out the `os.remove(md_file)` line.
 
-    View the Output
-        The script will generate .docx files for each .ipynb file in the current directory.
-        The .docx files will be saved in the same directory as the script.
-
-    Clean Up (Optional)
-        The script automatically removes intermediate .md files after the conversion.
-        If you want to keep the .md files, edit the script and comment out the os.remove(md_file) line.
-
-Example
+## Example
 
 Suppose your directory contains the following files:
 
+```plaintext
 convert_ipynb_to_docx.py
 notebook1.ipynb
 notebook2.ipynb
+```
 
 After running the script, your directory will look like this:
 
+```plaintext
 convert_ipynb_to_docx.py
 notebook1.docx
 notebook2.docx
+```
 
-Troubleshooting
+## Troubleshooting
 
-    Command not found: pandoc
-        Ensure Pandoc is installed and added to your system's PATH.
-        You can test this by running:
-
+- **Command not found: pandoc**
+  - Ensure Pandoc is installed and added to your system's `PATH`.
+  - You can test this by running:
+    ```bash
     pandoc --version
+    ```
 
-Missing Jupyter or nbconvert
-
-    Ensure Jupyter is installed using:
-
+- **Missing Jupyter or nbconvert**
+  - Ensure Jupyter is installed using:
+    ```bash
     pip install notebook
+    ```
 
-Script Errors
+- **Script Errors**
+  - Make sure your `.ipynb` files are not corrupted or empty.
+  - If you encounter specific errors, please open an issue in this repository.
 
-    Make sure your .ipynb files are not corrupted or empty.
-    If you encounter specific errors, please open an issue in this repository.
+---
+
+Happy converting!
