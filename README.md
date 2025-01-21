@@ -67,6 +67,8 @@ After running the script, your directory will look like this:
 
 ```plaintext
 convert_ipynb_to_docx.py
+notebook1.ipynb
+notebook2.ipynb
 notebook1.docx
 notebook2.docx
 ```
