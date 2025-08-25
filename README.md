@@ -18,6 +18,7 @@ Before running the script, make sure you have the following installed:
 3. **Pandoc**
    - Download and install Pandoc from [https://pandoc.org/installing.html](https://pandoc.org/installing.html).
    - Ensure Pandoc is added to your system's `PATH` so it can be used from the terminal.
+   - Add the install location in yout system's `PATH` its usually `‪C:\Program Files\Pandoc\pandoc.exe`
 
 ## Steps to Run the Script
 
